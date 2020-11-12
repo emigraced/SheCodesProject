@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boba Tea</title>
+    <style>
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 480px;
+      }
+
+      body {
+        background-color: #ffe2e4;
+      }
+
+      h1,
+      li,
+      h2,
+      button,
+      .footer {
+        color: #aa0723;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 45px;
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      li {
+        background-size: 150px;
+        border-radius: 3px;
+        font-weight: 600;
+        margin: 0 auto;
+        max-width: 482px;
+        padding: 20px 0;
+        transition: 150ms ease-in-out;
+      }
+
+      h2 {
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        margin: 20px auto 8px auto;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      table {
+        border-spacing: 30px 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      button {
+        background: linear-gradient(pink, #eb9c80, #ffeba1, #fecdc9);
+        border: none;
+        border-radius: 30px;
+        box-shadow: rgba(171, 7, 35, 0.5) 3px 3px 3px 0px;
+        cursor: pointer;
+        display: block;
+        font-size: 20px;
+        height: 50px;
+        margin: 0 auto;
+        transition: 150ms ease-in-out;
+        width: 130px;
+      }
+
+      p {
+        font-size: 12px;
+        text-align: center;
+      }
+
+      hr {
+        background-color: #aa0723;
+        border: none;
+        height: 1px;
+        margin: 0 auto;
+        width: 480px;
+      }
+
+      .link {
+        color: #aa0723;
+        text-decoration: none;
+      }
+
+      .firstLi {
+        background-color: pink;
+      }
+
+      .secondLi {
+        background-color: #eb9c80;
+      }
+
+      .thirdLi {
+        background-color: #ffeba1;
+      }
+
+      .fourthLi {
+        background-color: #fecdc9;
+      }
+
+      .leftTeaImg {
+        max-width: 115px;
+        transform: scaleX(-1) rotate(15deg);
+      }
+
+      .rightTeaImg {
+        max-width: 115px;
+        transform: rotate(15deg);
+      }
+
+      .socialIcon {
+        display: inline;
+        max-width: 18px;
+        margin: 0 auto;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      li:hover {
+        opacity: 0.7;
+      }
+
+      button:hover {
+        background: linear-gradient(to right, pink, #eb9c80, #ffeba1, #fecdc9);
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://laboratorioespresso.it/wp-content/uploads/2019/05/Bubble-tea-grande-710x473.jpg"
+      alt="Five glasses on a wooden chopping board, each containing a different flavour of boba tea. The chopping board is decorated with fresh fruit and chocolate."
+    />
+    <h1>
+      Reasons to Love
+      <a
+        class="link"
+        href="https://www.eater.com/2019/3/6/18240387/boba-milk-bubble-tea-explained-how-to-order"
+        target="blank"
+      >
+        Boba Tea
+      </a>
+    </h1>
+    <ul>
+      <li class="firstLi">
+        "
+        <em>
+          Boba
+        </em>
+        " is a fun word
+      </li>
+      <li class="secondLi">
+        You can eat & drink at the same time
+      </li>
+      <li class="thirdLi">
+        There are so many varieties
+      </li>
+      <li class="fourthLi" id="disappear">
+        *Your thoughts*
+      </li>
+    </ul>
+    <h2>
+      In ten words or less, tell me what
+      <br />
+      <span>
+        YOU
+      </span>
+      love about boba!
+    </h2>
+    <table>
+      <tr>
+        <td>
+          <img
+            class="leftTeaImg"
+            src="https://thumbs.dreamstime.com/b/cute-bubble-milk-tea-fresh-drink-cartoon-hand-drawn-style-character-drawing-vector-design-155614471.jpg"
+            alt="Drawing of a smiling boba tea in a travel cup with a straw."
+          />
+        </td>
+        <td>
+          <button>
+            <strong>
+              Tell me!
+            </strong>
+          </button>
+        </td>
+        <td>
+          <img
+            class="rightTeaImg"
+            src="https://thumbs.dreamstime.com/b/cute-bubble-milk-tea-fresh-drink-cartoon-hand-drawn-style-character-drawing-vector-design-155614471.jpg"
+            alt="Drawing of a smiling boba tea in a travel cup with a straw. It is a mirror image of the one on the left."
+          />
+        </td>
+      </tr>
+    </table>
+    <div class="footer">
+      <p>
+        Coded by Emily Mills
+      </p>
+      <hr size="1px" />
+      <p>
+        <a href="https://www.instagram.com/emigraced/" target="blank">
+          <img
+            class="socialIcon"
+            src="https://icons-for-free.com/iconfiles/png/512/apps+instagram+media+social+icon-1320193910954067434.png"
+            alt="Instagram social icon"
+          />
+        </a>
+      </p>
+    </div>
+    <script>
+      document.getElementById("disappear").hidden = true;
+
+      function addReason() {
+        alert(
+          "If you're not familiar with boba tea, click the link in the title to learn about this wonderful beverage. Prepare for your life to be changed!"
+        );
+        let answer = prompt("What do YOU love about boba?");
+        let newPanel = document.querySelector(".fourthLi");
+        newPanel.innerHTML = answer;
+        if (answer === "" || answer === null)
+          newPanel.innerHTML = "Not sure? I love the chewy-ness!";
+        else alert("Thank you for sharing the boba love! 🤗");
+        document.getElementById("disappear").hidden = false;
+      }
+
+      let tellMe = document.querySelector("button");
+      tellMe.addEventListener("click", addReason);
+    </script>
+  </body>
+</html>
